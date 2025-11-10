@@ -1,5 +1,5 @@
 {% set name = "optunahub" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/optunahub-{{ version }}.tar.gz
-  sha256: f9e6733267395b6989cb38b0840cacf164294025be8393d4352fcf801106fbe7
+  sha256: aa9cf98884b764b4cc8ad004b3b159eb6ed6249823e4bf0a5637b27ce185001a
 
 build:
   noarch: python
