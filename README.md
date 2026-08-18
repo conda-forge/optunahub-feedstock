@@ -17,10 +17,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=26066&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/optunahub-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/optunahub-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/optunahub-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -43,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `optunahub` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install optunahub
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install optunahub
 ```
 
-It is possible to list all of the versions of `optunahub` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add optunahub
+# for installing globally
+pixi global install optunahub
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `optunahub` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search optunahub --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search optunahub --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search optunahub --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -79,6 +122,8 @@ mamba repoquery whoneeds optunahub --channel conda-forge
 # List dependencies of `optunahub`:
 mamba repoquery depends optunahub --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -154,7 +199,4 @@ Feedstock Maintainers
 * [@not522](https://github.com/not522/)
 * [@toshihikoyanase](https://github.com/toshihikoyanase/)
 * [@y0z](https://github.com/y0z/)
-
-
-<!-- dummy commit to enable rerendering -->
 
